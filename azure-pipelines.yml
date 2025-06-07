@@ -1,7 +1,16 @@
-#trigger:- master
- pool:
- name: Default
- steps:- script: echo Hello, it's my Azure Devops App
- displayName: 'Run an echo command'- script: mvn clean install
- displayName: 'Build with maven'- script: java -jar target/jenkin-0.0.1-SNAPSHOT.jar
- displayName: 'Run a jar file of My jenkin App'
+# Uncomment this if you want to auto-trigger on pushes to master
+# trigger:
+# - master
+
+pool:
+  name: Default
+
+steps:
+- script: echo Hello, it's my Azure DevOps App
+  displayName: 'Run an echo command'
+
+- script: mvn clean install
+  displayName: 'Build with Maven'
+
+- script: java -jar target/jenkin-0.0.1-SNAPSHOT.jar
+  displayName: 'Run the JAR file of My Jenkins App'
