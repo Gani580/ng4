@@ -12,5 +12,5 @@ steps:
 - script: mvn clean install
   displayName: 'Build with Maven'
 
-- script: java -jar target/jenkin-0.0.1-SNAPSHOT.jar
-  displayName: 'Run the JAR file of My Jenkins App'
+- script: java -jar target/com.ng5.App-0.0.1-SNAPSHOT.jar
+  displayName: 'Run the JAR file of My com.ng5.App App'
